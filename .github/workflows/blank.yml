@@ -22,6 +22,8 @@ jobs:
 
       - name: Build a Docker image
         run: docker build -t testimage .
+      - name : Run the Docker iamge  
+        run: docker run -t testimages .
         
       - name: Tag Docker image
         run: docker tag testimage ${{secrets.DCOKER_USERNAME}}/testimage:latest
