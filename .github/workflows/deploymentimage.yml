@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build a Docker image
-        run: docker build -t kmkrishna1/testimage .
+        run: docker build --no-cache -t kmkrishna1/testimage .
       - name: Tag Docker image
         run: docker tag kmkrishna1/testimage kmkrishna1/testimage:latest
       - name: Push Docker image to Docker Hub
