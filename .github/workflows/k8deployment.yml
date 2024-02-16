@@ -9,4 +9,4 @@ jobs:
   - name: Checkout code
     uses: actions/checkout@v2
   - name: Deploy to Kubernetes
-    run: kubectl apply -f /kubernetes/deployment.yml
+    run: kubectl apply -f ./kubernetes/deployment.yml
